@@ -1,8 +1,11 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 
-# Create your views here.
+
+# Função para redirecionar para o portifolio
 def redireciona_portifolio(request):
-    render(request,'portifolio.html')
+    return redirect('Portifolio')
+
 
 def portifolio(request):
-    render(request,'portifolio.html')
+    return render(request,
+                  'portifolio.html')
