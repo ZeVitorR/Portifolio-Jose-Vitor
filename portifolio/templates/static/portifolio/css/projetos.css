@@ -1,0 +1,14 @@
+section.projetos{
+    margin: 3% auto;
+    width: 90%;
+}
+
+section.projetos h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+section.projetos p{
+    font-size: 1.7rem;
+    text-align: justify;
+}

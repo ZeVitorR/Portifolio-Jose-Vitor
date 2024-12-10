@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block 'head' %}
-    <link rel="stylesheet" href="{% static 'paginaInicial/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'portifolio/css/inicial.css' %}">
+    <link rel="stylesheet" href="{% static 'portifolio/css/sobremim.css' %}">
+    <link rel="stylesheet" href="{% static 'portifolio/css/objetivo.css' %}">
+    <link rel="stylesheet" href="{% static 'portifolio/css/experiencias.css' %}">
+    <link rel="stylesheet" href="{% static 'portifolio/css/projetos.css' %}">
 {% endblock %}
 
 {% block 'title' %} 
@@ -10,32 +14,32 @@
 {% endblock %}
 
 {% block 'corpo'%}
-
-    <h1>Portifólio de José Vitor Rodrigues</h1>
+    <section class="inicial">
+        <h1>José Vitor Rodrigues</h1>
+        <h2>Desenvolvedor <span>FullStack</span></h2>
+        <div class="icone">
+            <img src="{% static 'portifolio/img/html.png' %}" alt="icone do Html5" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/css.png' %}" alt="icone do CSS" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/js.png' %}" alt="icone do JavaScript" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/python.png' %}" alt="icone do Python" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/php.png' %}" alt="icone do PHP" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/advpl.png' %}" alt="icone do ADVPL" class="icone-iniciais" class="iconeInicial">
+        </div>
+    </section>    
     <section class="sobremim">
-        <div class="Foto">
-            <img src="" alt="Foto do desenvolvedor José Vitor Rodrigues" id="FotoJose">
+        <div class="foto">
+            <img src="{% static 'portifolio/img/dev_jose.png' %}" alt="Foto do desenvolvedor José Vitor Rodrigues" id="FotoJose">
         </div>
         <div class="texto">
             <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor Full Stack com habilidades tanto no Front-End quanto no Back-End. Tenho conhecimento sólido para criar interfaces básicas utilizando HTML, CSS e JavaScript, mas minha verdadeira especialidade está no desenvolvimento Back-End. Domino linguagens como ADVPL, Python e Java, aplicando-as para criar soluções robustas e eficientes.</p>
+            <p>Sou um desenvolvedor Full Stack com habilidades tanto no Front-End quanto no Back-End. Tenho conhecimento sólido para criar interfaces básicas utilizando HTML, CSS e JavaScript, mas minha verdadeira especialidade está no desenvolvimento Back-End. Domino linguagens como ADVPL, Python, e PHP, aplicando-as para criar soluções robustas e eficientes.</p>
             <p>Com uma forte lógica de programação, sou capaz de resolver problemas complexos e entregar soluções dentro do meu alcance. Além disso, possuo facilidade para aprender novas tecnologias e linguagens, me adaptando rapidamente às necessidades dos projetos.</p>
+            <div>
+                <a href="">Saiba Mais</a>
+            </div>
         </div>
-    </section>
-    <section class="objetivo">
-        <h2>Objetivos</h2>
-        <p>Meu grande objetivo de carreira é me tornar um desenvolvedor de excelência, capaz de resolver os problemas mais complexos possíveis. Para alcançar essa meta, mantenho-me em constante aprendizado, sempre buscando evoluir e me atualizar sobre as principais tendências e avanços tecnológicos. Acredito que o estudo contínuo é essencial para entregar soluções inovadoras e de alto impacto.</p>
-    </section>
-    <section class="Experiências">
-        <h2>Experiências Profissionais</h2>
-        <h3>THCM Desenvolvendo Cidade</h3>
-        <p>Out 2021 - Out 2023</p>
-        <p>Estágio no Setor TI</p>
-        <p>Funções:</p>
-        <p>Out 2023 - Momento</p>
-        <p>Analista de Desenvolvimento Júnior</p>
-    </section>
-    <section class="Projetos">
+    </section>  
+    <section class="projetos">
         <h2>Projetos</h2>
         <p>Ao longo da minha trajetória, desenvolvi projetos voltados para as plataformas Fluig e TOTVS Protheus, além de trabalhos em desenvolvimento web. Cada projeto foi uma oportunidade de aplicar minhas habilidades técnicas, solucionar desafios e criar soluções que agregam valor aos negócios. Aqui você encontrará alguns dos trabalhos que demonstram minha experiência e dedicação em diferentes áreas do desenvolvimento de software.</p>
         <div class="desenvolvimento-web">
@@ -134,5 +138,24 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="objetivo">
+        <h2>Objetivos</h2>
+        <p>Meu grande objetivo de carreira é me tornar um desenvolvedor de excelência, capaz de resolver os problemas mais complexos possíveis. Para alcançar essa meta, mantenho-me em constante aprendizado, sempre buscando evoluir e me atualizar sobre as principais tendências e avanços tecnológicos. Acredito que o estudo contínuo é essencial para entregar soluções inovadoras e de alto impacto.</p>
+    </section>
+    <section class="Experiencias">
+        <h2>Experiências Profissionais</h2>
+        <h3>THCM Desenvolvendo Cidade</h3>
+        <p>Out 2021 - Out 2023</p>
+        <p>Estágio no Setor TI</p>
+        <p>Funções:</p>
+        <p>Out 2023 - Momento</p>
+        <p>Analista de Desenvolvimento Júnior</p>
+    </section>
+    <section class="Formação">
+        <h2>Ciencias da Computação</h2>
+        <h3>Centro Universitário Barão de Mauá</h3>
+        <h3>Janeiro 2020 - Janeiro 2024</h3>
+        <p></p>
     </section>
 {% endblock %}

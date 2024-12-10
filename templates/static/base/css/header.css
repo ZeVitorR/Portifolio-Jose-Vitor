@@ -9,6 +9,8 @@ header{
     background-color: var(--main-color);
     color: white;
     align-items: center;
+    width: 100%;
+    position: fixed;
 }
 header div{
     width: 100px;

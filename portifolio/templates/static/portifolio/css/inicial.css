@@ -1,0 +1,29 @@
+main{
+    background-color: gray;
+}
+    main section.inicial{
+        margin: 8% 0 0% 0 ;
+
+    }
+
+    main section.inicial h1{
+        font-weight: 900;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    main section.inicial h2{
+        font-weight: 700;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    main section.inicial .icone{
+        display: flex;
+        justify-content: center;
+    }
+    main section.inicial .icone img{
+        width: 3%;
+        margin-left: 2%;
+    }
+   
