@@ -18,6 +18,8 @@ header div{
 
 header div img{
     width: 100%;
+    position: relative;
+    left: 82%;
 }
 
 header nav{
