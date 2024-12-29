@@ -1,13 +1,9 @@
-var menuOpen = false
-
 function openmenu() {
-    lista = document.getElementById('itemLista')
-    if(menuOpen == true){
+    lista = document.getElementById('itemListaMobile')
+    if(lista.style.display == "flex"){
         lista.style.display = "none"
-        menuOpen = false
     }else{
         lista.style.display = 'flex'
-        menuOpen = true
     }
 }
 

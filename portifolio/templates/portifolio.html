@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="{% static 'portifolio/css/inicial.css' %}">
     <link rel="stylesheet" href="{% static 'portifolio/css/sobremim.css' %}">
     <link rel="stylesheet" href="{% static 'portifolio/css/projetos.css' %}">
-    <script src="{% static 'portifolio/js/carrosel.js' %}"></script>
 {% endblock %}
 
 {% block 'title' %} 
@@ -13,7 +12,7 @@
 {% endblock %}
 
 {% block 'corpo'%}
-    <section class="inicial">
+    <section class="inicial" data-animation="left">
         <h1>José Vitor Rodrigues</h1>
         <h2>Desenvolvedor <span>FullStack</span></h2>
         <div class="icone">
@@ -25,7 +24,7 @@
             <img src="{% static 'portifolio/img/advpl.png' %}" alt="icone do ADVPL" class="icone-iniciais" class="iconeInicial">
         </div>
     </section>    
-    <section class="sobremim">
+    <section class="sobremim" data-animation="right">
         <div class="foto">
             <img src="{% static 'portifolio/img/dev_jose.png' %}" alt="Foto do desenvolvedor José Vitor Rodrigues" id="FotoJose">
         </div>
@@ -38,15 +37,15 @@
             </div>
         </div>
     </section>  
-    <section class="projetos">
+    <section class="projetos" data-animation="left">
         <h2>Projetos</h2>
         <p>Ao longo da minha trajetória, desenvolvi projetos voltados para as plataformas Fluig e TOTVS Protheus, além de trabalhos em desenvolvimento web. Cada projeto foi uma oportunidade de aplicar minhas habilidades técnicas, solucionar desafios e criar soluções que agregam valor aos negócios. Aqui você encontrará alguns dos trabalhos que demonstram minha experiência e dedicação em diferentes áreas do desenvolvimento de software.</p>
-        <div class="desenvolvimento-web">
+        <div class="desenvolvimento-web" data-animation="right">
             <h3>Desenvolvimento Web</h3>
             <div class="sliders">
                 <button class="prev" id="prevBtn">❮</button>
                 <div class="container" id="cards">
-                    <a href="https://innovedev.com.br/cars/">
+                    <a href="https://innovedev.com.br/cars/" data-animation="left">
                         <div class="card">
                             <div class="imagem" id="innoveCars">
                                 <img src="{% static 'portifolio/img/innovecars.svg' %}" alt="Imagem do projeto Innove Cars">
@@ -63,7 +62,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://innovedev.com.br/pays/">
+                    <a href="https://innovedev.com.br/pays/" data-animation="left">
                         <div class="card">
                             <div class="imagem" id="innovePagamentos">
                                 <img src="{% static 'portifolio/img/innovePagamentos.png' %}" alt="Imagem do projeto Innove Pagamentos">
@@ -80,7 +79,7 @@
                             </div>
                         </div>
                     </a>               
-                    <a href="">
+                    <a href="" data-animation="left">
                         <div class="card">
                             <div class="imagem" id="innoveGestão">
                                 <img src="{% static 'portifolio/img/embrec.png' %}" alt="Imagem informando que o projeto está em construção">
@@ -203,4 +202,9 @@
         </div> -->
     </section>
    
+{% endblock %}
+
+{% block 'scripts' %}
+    <script src="{% static 'portifolio/js/carrosel.js' %}"></script>
+    <script src="{% static 'portifolio/js/animationPage.js' %}"></script>
 {% endblock %}

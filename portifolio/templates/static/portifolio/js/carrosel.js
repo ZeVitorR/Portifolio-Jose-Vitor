@@ -2,11 +2,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const cards = document.getElementById('cards');
-    const cardWidth = document.querySelector('.card').offsetWidth + 30; // Largura do card com margem
+    const card = document.querySelector('.card');
+    const styles = window.getComputedStyle(card);
+    const width = card.offsetWidth
+    const marginRight = parseInt(styles.marginRight);
+    const marginLeft = parseInt(styles.marginLeft);
+    const cardWidth = width + marginRight + marginLeft; // Largura do card com margem
     let currentIndex = 0;
 
     function updateSlider() {
         cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        console.log(width,marginLeft,marginRight, cardWidth)
     }
 
     prevBtn.addEventListener('click', function() {
@@ -29,5 +35,3 @@ document.addEventListener("DOMContentLoaded", function() {
         updateSlider();
     });
 });
-
-console.log('oi')

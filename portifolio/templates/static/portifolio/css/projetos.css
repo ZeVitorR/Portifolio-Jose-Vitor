@@ -135,9 +135,9 @@ button:hover {
         font-size: 2rem;
     }
     .card{
-        width: 90%;
+        width: 85%;
         height: 400px;
-        margin: 2% 2%;
+        margin: 7.5%;
         overflow: hidden;
     }
     .card .dados .resumo{
@@ -152,17 +152,17 @@ button:hover {
     }
     
     .prev {
-        display: none;
-        left: 5px;
+        display: block;
+        left: 8%;
     }
     
     .next {
-        display: none;
-        right: -50px;
+        display: block;
+        right: -23%;
     }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (min-width: 901px) and  (max-width: 1300px){
     .prev {
         left: 5%;
         display: block;

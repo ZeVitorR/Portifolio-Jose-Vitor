@@ -1,5 +1,7 @@
 main{
     background-color: gray;
+    width: 105%;
+    overflow: hidden;
 }
     main section.inicial{
         margin: 8% 0 0.5% 0 ;
@@ -46,4 +48,29 @@ main{
         width: 10%;
         padding: 5% 0;
     }
+}
+
+[data-animation]{
+    opacity: 0;
+    transition: .5s;
+}
+
+[data-animation="left"]{
+    transform: translate3d(-50px, 50px, 0)
+}
+
+[data-animation="right"]{
+    transform: translate3d(50px, 50px, 0)
+}
+
+[data-animation].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.container :nth-child(2){
+    transition-delay: 400ms;
+}
+.container :nth-child(3){
+    transition-delay: 700ms;
 }
