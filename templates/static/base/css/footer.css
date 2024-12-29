@@ -1,10 +1,18 @@
 footer{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2%;
 }
 
+footer div.item1{
+    width: 35%;
+}
+
+footer div.item2{
+    width: 60%;
+}
 footer div.item2 .icone{
     width: 5%;
 }

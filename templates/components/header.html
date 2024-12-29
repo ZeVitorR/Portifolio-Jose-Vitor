@@ -1,13 +1,17 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'base/css/header.css' %} ">
+<script src="{% static 'base/js/script.js' %}"></script>
 
 <header id="cabecalho">
     <div>
-       <img src="{% static 'base/img/programacao.png' %}" alt="imagem simbolo de programação">
+       <img src="{% static 'base/img/programacao.png' %}" alt="imagem simbolo de programação" id="dev">
     </div>
     <nav>
-        <ul>
+        <div class="mobile">
+            <img src="{% static 'base/img/menu.png' %}" alt="simbolo representando a abertura de menu com os itens" id="menu" onclick="openmenu()">
+        </div>
+        <ul class="item" id="itemLista">
             <li>Sobre</li>
             <li>Projetos</li>
             <li>Web</li>

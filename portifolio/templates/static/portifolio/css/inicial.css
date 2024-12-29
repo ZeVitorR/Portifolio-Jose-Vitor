@@ -26,4 +26,24 @@ main{
         width: 3%;
         margin-left: 2%;
     }
-   
+
+@media screen and (max-width: 900px) {
+    main section.inicial{
+        padding-top: 20%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    main section.inicial h1{
+        text-align: center;
+        width: 100%;
+        font-size: 4rem;
+    }
+    main section.inicial h2{
+        font-size: 3.3rem;
+    }
+    main section.inicial .icone img{
+        width: 10%;
+        padding: 5% 0;
+    }
+}

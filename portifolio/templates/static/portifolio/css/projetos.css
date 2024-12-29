@@ -1,6 +1,7 @@
 section.projetos{
     margin: 3% auto;
     width: 90%;
+    overflow: hidden;
 }
 
     section.projetos h2{
@@ -22,13 +23,22 @@ section.projetos{
         text-decoration: none;
         color: black;
     }
+.sliders{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
 .container{
+    width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 .card{
+    transition: transform 0.3s ease-in-out;
     width: 350px;
     height: 500px;
     margin: 25px;
@@ -89,4 +99,77 @@ section.projetos{
     
 .card:hover{
     transform: scale3d(1.1, 1.1, 1);
+}
+button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    display: none;
+    left: 5px;
+}
+
+.next {
+    display: none;
+    right: -50px;
+}
+@media screen and (max-width: 900px) {
+    section.projetos p{
+        font-size: 1.3rem;
+    }
+    section.projetos h3{
+        font-size: 2rem;
+    }
+    .card{
+        width: 90%;
+        height: 400px;
+        margin: 2% 2%;
+        overflow: hidden;
+    }
+    .card .dados .resumo{
+        width: 80%;
+        padding: 0 2%;
+        font-size: 1.3rem;
+    }
+
+    .seta{
+        position: static;
+        top: 222px;
+    }
+    
+    .prev {
+        display: none;
+        left: 5px;
+    }
+    
+    .next {
+        display: none;
+        right: -50px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .prev {
+        left: 5%;
+        display: block;
+    }
+    
+    .next {
+        right: -41%;
+        display: block;
+    }
 }
