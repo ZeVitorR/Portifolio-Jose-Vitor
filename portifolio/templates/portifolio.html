@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
+
+{% block 'language' %}{{html_language}}{% endblock %}
 
 {% block 'head' %}
     <link rel="stylesheet" href="{% static 'portifolio/css/inicial.css' %}">
@@ -8,40 +11,40 @@
 {% endblock %}
 
 {% block 'title' %} 
-    Portifólio
+    {% trans 'Portfólio ' %}
 {% endblock %}
 
 {% block 'corpo'%}
     <section class="inicial" data-animation="left">
         <h1>José Vitor Rodrigues</h1>
-        <h2>Desenvolvedor <span>FullStack</span></h2>
+        <h2>{% trans 'Desenvolvedor FullStack' %} </h2>
         <div class="icone">
-            <img src="{% static 'portifolio/img/html.png' %}" alt="icone do Html5" class="icone-iniciais" class="iconeInicial">
-            <img src="{% static 'portifolio/img/css.png' %}" alt="icone do CSS" class="icone-iniciais" class="iconeInicial">
-            <img src="{% static 'portifolio/img/js.png' %}" alt="icone do JavaScript" class="icone-iniciais" class="iconeInicial">
-            <img src="{% static 'portifolio/img/python.png' %}" alt="icone do Python" class="icone-iniciais" class="iconeInicial">
-            <img src="{% static 'portifolio/img/php.png' %}" alt="icone do PHP" class="icone-iniciais" class="iconeInicial">
-            <img src="{% static 'portifolio/img/advpl.png' %}" alt="icone do ADVPL" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/html.png' %}" alt="{% trans 'icone do Html5 ' %}" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/css.png' %}" alt="{% trans 'icone do CSS ' %}" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/js.png' %}" alt="{% trans 'icone do JavaScript ' %}" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/python.png' %}" alt="{% trans 'icone do Python ' %}" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/php.png' %}" alt="{% trans 'icone do PHP ' %}" class="icone-iniciais" class="iconeInicial">
+            <img src="{% static 'portifolio/img/advpl.png' %}" alt="{% trans 'icone do ADVPL ' %}" class="icone-iniciais" class="iconeInicial">
         </div>
     </section>    
     <section class="sobremim" data-animation="right">
         <div class="foto">
-            <img src="{% static 'portifolio/img/dev_jose.png' %}" alt="Foto do desenvolvedor José Vitor Rodrigues" id="FotoJose">
+            <img src="{% static 'portifolio/img/dev_jose.png' %}" alt="{% trans 'Foto do desenvolvedor José Vitor Rodrigues' %}" id="FotoJose">
         </div>
         <div class="texto">
-            <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor Full Stack com habilidades tanto no Front-End quanto no Back-End. Tenho conhecimento sólido para criar interfaces básicas utilizando HTML, CSS e JavaScript, mas minha verdadeira especialidade está no desenvolvimento Back-End. Domino linguagens como ADVPL, Python, e PHP, aplicando-as para criar soluções robustas e eficientes.</p>
-            <p>Com uma forte lógica de programação, sou capaz de resolver problemas complexos e entregar soluções dentro do meu alcance. Além disso, possuo facilidade para aprender novas tecnologias e linguagens, me adaptando rapidamente às necessidades dos projetos.</p>
+            <h2>{% trans 'Sobre Mim' %}</h2>
+            <p>{% trans 'Sou um desenvolvedor Full Stack com habilidades tanto no Front-End quanto no Back-End. Tenho conhecimento sólido para criar interfaces básicas utilizando HTML, CSS e JavaScript, mas minha verdadeira especialidade está no desenvolvimento Back-End. Domino linguagens como ADVPL, Python, e PHP, aplicando-as para criar soluções robustas e eficientes. ' %}</p>
+            <p>{% trans 'Com uma forte lógica de programação, sou capaz de resolver problemas complexos e entregar soluções dentro do meu alcance. Além disso, possuo facilidade para aprender novas tecnologias e linguagens, me adaptando rapidamente às necessidades dos projetos.' %}</p>
             <div>
-                <a href="">Saiba Mais</a>
+                <a href="">{% trans 'Saiba Mais' %}</a>
             </div>
         </div>
     </section>  
     <section class="projetos" data-animation="left">
-        <h2>Projetos</h2>
-        <p>Ao longo da minha trajetória, desenvolvi projetos voltados para as plataformas Fluig e TOTVS Protheus, além de trabalhos em desenvolvimento web. Cada projeto foi uma oportunidade de aplicar minhas habilidades técnicas, solucionar desafios e criar soluções que agregam valor aos negócios. Aqui você encontrará alguns dos trabalhos que demonstram minha experiência e dedicação em diferentes áreas do desenvolvimento de software.</p>
+        <h2>{% trans 'Projetos' %}</h2>
+        <p>{% trans 'Ao longo da minha trajetória, desenvolvi projetos voltados para as plataformas Fluig e TOTVS Protheus, além de trabalhos em desenvolvimento web. Cada projeto foi uma oportunidade de aplicar minhas habilidades técnicas, solucionar desafios e criar soluções que agregam valor aos negócios. Aqui você encontrará alguns dos trabalhos que demonstram minha experiência e dedicação em diferentes áreas do desenvolvimento de software.' %}</p>
         <div class="desenvolvimento-web" data-animation="right">
-            <h3>Desenvolvimento Web</h3>
+            <h3>{% trans 'Desenvolvimento Web' %}</h3>
             <div class="sliders">
                 <button class="prev" id="prevBtn">❮</button>
                 <div class="container" id="cards">
@@ -52,7 +55,7 @@
                             </div>
                             <div class="dados">
                                 <h3 class="titulo">Innove Cars</h3>
-                                <p class="resumo">Projeto que simula um site de vendas de carros vintages e modernos.</p>
+                                <p class="resumo">{% trans 'Projeto que simula um site de vendas de carros vintages e modernos.' %}</p>
                             </div>
                             <div class="linguagens">
                                 <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">
@@ -69,7 +72,7 @@
                             </div>
                             <div class="dados">
                                 <h3 class="titulo">Innove Pagamentos</h3>
-                                <p class="resumo">Projeto que simula o funcionamento de um banco utilizando o uso de APIs em seu desenvolvimento</p>
+                                <p class="resumo">{% trans 'Projeto que simula o funcionamento de um banco utilizando o uso de APIs em seu desenvolvimento' %}</p>
                             </div>
                             <div class="linguagens">
                                 <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">
@@ -86,7 +89,7 @@
                             </div>
                             <div class="dados">
                                 <h3 class="titulo">Innove Gestão</h3>
-                                <p class="resumo">Projeto em construção...</p>
+                                <p class="resumo">{% trans 'Projeto em construção...' %}</p>
                             </div>
                             <div class="linguagens">
                                 <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">

@@ -1,26 +1,26 @@
 {% load static %}
-
+{% load i18n %}
 <link rel="stylesheet" type="text/css" href=" {% static 'base/css/footer.css' %} ">
 
 <footer>
 
     <div class="item1">
-        <p>Desenvolvido por</p>
+        <p>{% trans 'Desenvolvido por' %}</p>
         <p>José Vitor Rodrigues</p>
     </div>
 
     <div class="item2">
-        <h3>Contatos</h3>
+        <h3>{% trans 'Contatos' %}</h3>
         <div class="linkedin">
-            <img src="{% static 'base/img/linkedin.png' %}" alt="icone do linkedin" class="icone" id="icone-linkedin">
+            <img src="{% static 'base/img/linkedin.png' %}" alt="{% trans 'icone do linkedin' %}" class="icone" id="icone-linkedin">
             <a href="https://www.linkedin.com/in/josevitorrodrigues/">Linkedin</a>
         </div>
         <div class="github">
-            <img src="{% static 'base/img/github.png' %}" alt="icone do github" class="icone" id="icone-github">
+            <img src="{% static 'base/img/github.png' %}" alt="{% trans 'icone do github' %}" class="icone" id="icone-github">
             <a href="https://github.com/ZeVitorR">GitHub</a>
         </div>
         <div class="contatos">
-            <img src="{% static 'base/img/email.png' %}" alt="icone de email" class="icone" id="icone-email">
+            <img src="{% static 'base/img/email.png' %}" alt="{% trans 'icone de email' %}" class="icone" id="icone-email">
             <a href="mailto:rodriguesze6@gmail.com">rodriguesze6@gmail.com</a>
         </div>
     </div>

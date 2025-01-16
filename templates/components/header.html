@@ -1,26 +1,26 @@
 {% load static %}
-
+{% load i18n %}
 <link rel="stylesheet" type="text/css" href="{% static 'base/css/header.css' %} ">
 <script src="{% static 'base/js/script.js' %}"></script>
 
 <header id="cabecalho">
     <div>
-       <img src="{% static 'base/img/programacao.png' %}" alt="imagem simbolo de programação" id="dev">
+       <img src="{% static 'base/img/programacao.png' %}" alt="{% trans 'imagem simbolo de programação' %}" id="dev">
     </div>
     <nav>
         <div class="mobile">
-            <img src="{% static 'base/img/menu.png' %}" alt="simbolo representando a abertura de menu com os itens" id="menu" onclick="openmenu()">
+            <img src="{% static 'base/img/menu.png' %}" alt="{% trans 'simbolo representando a abertura de menu com os itens' %}" id="menu" onclick="openmenu()">
             <ul class="item" id="itemListaMobile">
-                <li>Sobre</li>
-                <li>Projetos</li>
+                <li>{% trans 'Sobre' %}</li>
+                <li>{% trans 'Projetos' %}</li>
                 <li>Web</li>
                 <li>Fluig</li>
                 <li>Protheus</li>
             </ul>
         </div>
         <ul class="item" id="itemLista">
-            <li>Sobre</li>
-            <li>Projetos</li>
+            <li>{% trans 'Sobre' %}</li>
+            <li>{% trans 'Projetos' %}</li>
             <li>Web</li>
             <li>Fluig</li>
             <li>Protheus</li>
