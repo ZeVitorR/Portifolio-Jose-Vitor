@@ -1,9 +1,8 @@
-function openmenu() {
-    lista = document.getElementById('itemListaMobile')
-    if(lista.style.display == "flex"){
-        lista.style.display = "none"
-    }else{
-        lista.style.display = 'flex'
-    }
+function animar(){    
+    const menuMob = document.getElementById('menu-mobile')
+    const button = document.getElementById('btm-menu')
+
+    menuMob.classList.toggle('ativo')
+    button.classList.toggle('ativar')
 }
 

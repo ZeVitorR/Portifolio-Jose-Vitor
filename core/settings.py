@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8e2b7cp4(_44e^_#v)-hyqqk!gx-*bc1(v*gat3=vtf7^=jko('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'innovedev.com.br',
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portifolio',
-    'sobremim',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +130,7 @@ LOCALE_PATHS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'staticPorti/'
+STATIC_URL = '/staticPorti/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticPorti/')
 STATICFILES_DIRS = [
     BASE_DIR / 'templates/static/',

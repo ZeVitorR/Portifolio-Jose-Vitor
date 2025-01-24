@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block 'corpo'%}
-    <section class="inicial" data-animation="left">
+    <section class="inicial observer" data-animation="left" id="home">
         <h1>José Vitor Rodrigues</h1>
         <h2>{% trans 'Desenvolvedor FullStack' %} </h2>
         <div class="icone">
@@ -26,8 +26,9 @@
             <img src="{% static 'portifolio/img/php.png' %}" alt="{% trans 'icone do PHP ' %}" class="icone-iniciais" class="iconeInicial">
             <img src="{% static 'portifolio/img/advpl.png' %}" alt="{% trans 'icone do ADVPL ' %}" class="icone-iniciais" class="iconeInicial">
         </div>
+        <h3>{% trans 'Inovação é o coração do meu trabalho: cada projeto é uma oportunidade para criar algo único e impactante' %}</h3>
     </section>    
-    <section class="sobremim" data-animation="right">
+    <section class="sobremim observer" data-animation="right" id="sobre">
         <div class="foto">
             <img src="{% static 'portifolio/img/dev_jose.png' %}" alt="{% trans 'Foto do desenvolvedor José Vitor Rodrigues' %}" id="FotoJose">
         </div>
@@ -36,18 +37,18 @@
             <p>{% trans 'Sou um desenvolvedor Full Stack com habilidades tanto no Front-End quanto no Back-End. Tenho conhecimento sólido para criar interfaces básicas utilizando HTML, CSS e JavaScript, mas minha verdadeira especialidade está no desenvolvimento Back-End. Domino linguagens como ADVPL, Python, e PHP, aplicando-as para criar soluções robustas e eficientes. ' %}</p>
             <p>{% trans 'Com uma forte lógica de programação, sou capaz de resolver problemas complexos e entregar soluções dentro do meu alcance. Além disso, possuo facilidade para aprender novas tecnologias e linguagens, me adaptando rapidamente às necessidades dos projetos.' %}</p>
             <div>
-                <a href="">{% trans 'Saiba Mais' %}</a>
+                <a href="{% url 'sobremim' %}">{% trans 'Saiba Mais' %}</a>
             </div>
         </div>
     </section>  
-    <section class="projetos" data-animation="left">
+    <section class="projetos observer" data-animation="left" id="project">
         <h2>{% trans 'Projetos' %}</h2>
         <p>{% trans 'Ao longo da minha trajetória, desenvolvi projetos voltados para as plataformas Fluig e TOTVS Protheus, além de trabalhos em desenvolvimento web. Cada projeto foi uma oportunidade de aplicar minhas habilidades técnicas, solucionar desafios e criar soluções que agregam valor aos negócios. Aqui você encontrará alguns dos trabalhos que demonstram minha experiência e dedicação em diferentes áreas do desenvolvimento de software.' %}</p>
-        <div class="desenvolvimento-web" data-animation="right">
+        <div class="desenvolvimento-web" data-animation="right" id="Web">
             <h3>{% trans 'Desenvolvimento Web' %}</h3>
             <div class="sliders">
-                <button class="prev" id="prevBtn">❮</button>
-                <div class="container" id="cards">
+                <button class="prev mudar" id="prevBtn" >❮</button>
+                <div class="container" id="cards" >
                     <a href="https://innovedev.com.br/cars/" data-animation="left">
                         <div class="card">
                             <div class="imagem" id="innoveCars">
@@ -58,10 +59,10 @@
                                 <p class="resumo">{% trans 'Projeto que simula um site de vendas de carros vintages e modernos.' %}</p>
                             </div>
                             <div class="linguagens">
-                                <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/css.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/js.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/python.png' %}" alt="" class="card-icon">
+                                <img src="{% static 'portifolio/img/html.png' %}" alt="{% trans 'icone do Html5 ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/css.png' %}" alt="{% trans 'icone do CSS ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/js.png' %}" alt="{% trans 'icone do JavaScript ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/python.png' %}" alt="{% trans 'icone do Python ' %}" class="card-icon">
                             </div>
                         </div>
                     </a>
@@ -75,32 +76,32 @@
                                 <p class="resumo">{% trans 'Projeto que simula o funcionamento de um banco utilizando o uso de APIs em seu desenvolvimento' %}</p>
                             </div>
                             <div class="linguagens">
-                                <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/css.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/js.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/python.png' %}" alt="" class="card-icon">
+                                <img src="{% static 'portifolio/img/html.png' %}" alt="{% trans 'icone do Html5 ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/css.png' %}" alt="{% trans 'icone do CSS ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/js.png' %}" alt="{% trans 'icone do JavaScript ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/python.png' %}" alt="{% trans 'icone do Python ' %}" class="card-icon">
                             </div>
                         </div>
                     </a>               
                     <a href="" data-animation="left">
                         <div class="card">
                             <div class="imagem" id="innoveGestão">
-                                <img src="{% static 'portifolio/img/embrec.png' %}" alt="Imagem informando que o projeto está em construção">
+                                <img src="{% static 'portifolio/img/embrec.png' %}" alt="{% trans 'Imagem informando que o projeto está em construção' %}">
                             </div>
                             <div class="dados">
                                 <h3 class="titulo">Innove Gestão</h3>
                                 <p class="resumo">{% trans 'Projeto em construção...' %}</p>
                             </div>
                             <div class="linguagens">
-                                <img src="{% static 'portifolio/img/html.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/css.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/js.png' %}" alt="" class="card-icon">
-                                <img src="{% static 'portifolio/img/python.png' %}" alt="" class="card-icon">
+                                <img src="{% static 'portifolio/img/html.png' %}" alt="{% trans 'icone do Html5 ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/css.png' %}" alt="{% trans 'icone do CSS ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/js.png' %}" alt="{% trans 'icone do JavaScript ' %}" class="card-icon">
+                                <img src="{% static 'portifolio/img/python.png' %}" alt="{% trans 'icone do Python ' %}" class="card-icon">
                             </div>
                         </div>
                     </a>
                 </div>
-                <button class="next" id="nextBtn">❯</button>
+                <button class="next mudar" id="nextBtn">❯</button>
             </div>
         </div>
         <!-- <div class="Fluig">

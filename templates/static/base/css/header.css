@@ -1,93 +1,187 @@
 :root{
-    --main-color: #000;
+    --main-color: #000000;
+    --text: #d3d0d0e3;
+    --selecao: #ffffff;
+    --hover: #c9c5c59c;
+    --branco: #ffffff;
+    --cor-linha1: #ff2500;
+    --cor-linha2: #ff7100;
+    --backgroud-mobile: #0000008c;
+    --backgroud-mobileSel: #000000a6;
+    --cor-sanduiche:#ccc;
+    --cor-X-sanduiche:#ff0000;
+    --cor-borda-fechada: #ff0000;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
 header{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: space-between;
     background-color: var(--main-color);
-    color: white;
     width: 100%;
+    padding: 5px;
     position: fixed;
     z-index: 999;
 }
-    header div{
-        width: 100px;
-    }
 
-        header div img{
-            width: 100%;
-            position: relative;
-            left: 82%;
-        }
-
-    header nav{
-        display: block;
-        margin: auto 0;
-        font-size: 2.2rem;
-        width: 50%;
-    }
-
-        header nav ul{
-            display: flex;
-            justify-content: space-around;
-        }
-    
-    div.mobile{
-        display: none;
-    }
-    #itemLista{
-        display: flex;
-    }
-@media screen and (max-width: 900px) {
-    header{
-        justify-content: space-between;
-        position: fixed;
-        width: 100%;
-        overflow: hidden;
-    }
-        header div{
-            width: auto;
-        }
-        header div img#dev{
-            width: 70px;
-            position: relative;
-            left: 20%;
-        }
-       
-        div.mobile{
-            display: block;
-            text-align: end;
-        }
-            header div.mobile img#menu{
-                width: 50px;
-                padding-right: 20%;
-                position: relative;
-                left: 0;
-                margin-top: 5%;
-            }
-    ul.item{
-        display: none;
-        flex-direction: column;
-        justify-content: end;
-        text-align: right;
-        padding: 2% 20% 6% 0;
-        font-size: 1.8rem;
-    }
-    #itemLista{
-        display: none;
-    }
-    #itemListaMobile{
-        display: none;
-    }
+header div.container{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media screen and (min-width: 901px) {
-    #itemListaMobile{
+header div.container div.logo,
+header div.container div.social{
+    width: 30%;
+}
+
+/* estilizando a parte da midia social */
+header div.container div.social{
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+header div.container div.social a{
+    margin-left: 8%;
+    transition: none;
+}
+header div.container div.social a:hover{
+    transform: translateY(-10%);
+}
+header div.container div.social a button{
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(45deg,  var(--cor-linha1), var(--cor-linha2));
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+header div.container div.social a button i{
+    font-size: 35px;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+/* estilizando o logo */
+header div.container div.logo img{
+    width: 80px;
+}
+
+/* estilizando dado do menu desktop */
+header div.container div.menu nav a{
+    color: var(--text);
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 1.5rem;
+    position: relative;
+    transition: none;
+} 
+header div.container div.menu nav a.menu-link::after{
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, var(--cor-linha1), var(--cor-linha2));
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.3s;
+}
+header div.container div.menu nav a.active::after,
+header div.container div.menu nav a:hover::after{
+    width: 50%;
+}
+header div.container div.menu nav a.active{
+    color: var(--selecao);
+}
+header div.container div.menu nav a:hover{
+    color: var(--hover);
+    transition: none;
+}
+
+/*Estilizando o mobile*/
+
+/*Criando o estilo do menu sanduiche*/
+header div.container button.sanduiche{
+    border: 1px solid var(--cor-sanduiche);
+    border-radius: 15%;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+header div.container button.sanduiche span.linha{
+    width: 33.33px;
+    height: 3px;
+    background-color: var(--cor-sanduiche);
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+header div.container button.ativar{
+    border-color: var(--cor-borda-fechada);
+}
+
+header div.container button.ativar .linha:nth-child(1){
+    transform: translateY(4px) rotate(-45deg);
+    background-color: var(--cor-X-sanduiche);
+}
+header div.container button.ativar .linha:nth-child(3){
+    transform: translateY(-4px) rotate(45deg);
+    background-color: var(--cor-X-sanduiche);
+}
+
+header div.container button.ativar .linha:nth-child(2){
+    display: none;
+}
+
+/*estilizando o menu mobile*/
+header div.container div.menu-mobile{
+    background-color: var(--backgroud-mobile);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 77px;
+    left:0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+header div.container div.menu-mobile a{
+    color: var(--branco);
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    font-size: 16pt;
+}
+
+header div.container div.menu-mobile a:hover{
+    background-color: var(--backgroud-mobileSel);
+}
+
+@media screen and (max-width: 900px) {
+    header div.container div.social,
+    header div.container div.menu{
         display: none;
     }
-    #itemLista{
-        display: flex;
+
+    header div.container div.logo{
+        width: 100%;
+    }
+
+    header div.container button.sanduiche{
+        display: block;
+    }
+
+    header div.container div.menu-mobile.ativo{
+        visibility: visible;
+        height: auto;
     }
 }

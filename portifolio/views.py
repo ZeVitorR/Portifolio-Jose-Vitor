@@ -12,3 +12,8 @@ def portifolio(request):
     return render(request,
                   'portifolio.html',
                   {'html_language': html_language})
+
+# Create your views here.
+def sobremim(request):
+    return render(request,
+                  'sobremim.html')

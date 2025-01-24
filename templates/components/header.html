@@ -4,26 +4,39 @@
 <script src="{% static 'base/js/script.js' %}"></script>
 
 <header id="cabecalho">
-    <div>
-       <img src="{% static 'base/img/programacao.png' %}" alt="{% trans 'imagem simbolo de programação' %}" id="dev">
-    </div>
-    <nav>
-        <div class="mobile">
-            <img src="{% static 'base/img/menu.png' %}" alt="{% trans 'simbolo representando a abertura de menu com os itens' %}" id="menu" onclick="openmenu()">
-            <ul class="item" id="itemListaMobile">
-                <li>{% trans 'Sobre' %}</li>
-                <li>{% trans 'Projetos' %}</li>
-                <li>Web</li>
-                <li>Fluig</li>
-                <li>Protheus</li>
-            </ul>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'base/img/programacao.png' %}" alt="{% trans 'imagem simbolo de programação' %}" id="dev">
         </div>
-        <ul class="item" id="itemLista">
-            <li>{% trans 'Sobre' %}</li>
-            <li>{% trans 'Projetos' %}</li>
-            <li>Web</li>
-            <li>Fluig</li>
-            <li>Protheus</li>
-        </ul>
-    </nav>
+        <div class="menu">
+            <nav>
+                <a href="#home" class="menu-link">{% trans 'Início' %}     </a>
+                <a href="#sobre" class="menu-link">{% trans 'Sobre' %}     </a>
+                <a href="#project" class="menu-link">{% trans 'Projetos' %}</a>
+                <a href="#contato" class="menu-link">{% trans 'Contato' %}</a>
+            </nav>
+        </div>
+
+        <button onclick="animar()" class="sanduiche" id="btm-menu">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </button>
+
+        <div class="menu-mobile" id="menu-mobile" onclick="animar()">
+            <nav>
+                <a href="#home" class="menu-link">{% trans 'Início' %}     </a>
+                <a href="#sobre" class="menu-link">{% trans 'Sobre' %}     </a>
+                <a href="#project" class="menu-link">{% trans 'Projetos' %}</a>
+                <a href="#contato" class="menu-link">{% trans 'Contato' %}</a>
+            </nav>
+        </div>
+        <div class="social">
+            <a href=""><button><i class="fa-brands fa-square-github"></i></button></a>
+            <a href=""><button><i class="fa-brands fa-linkedin"></i></button></a>
+            <a href=""><button><i class="fa-solid fa-envelope"></i></button></a>
+        </div>
+    </div>
+
+    
 </header>
