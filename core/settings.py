@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'innovedev.com.br',
+    'innovedev.com',
+    '187.127.56.155',
     '127.0.0.1'
 ]
 
