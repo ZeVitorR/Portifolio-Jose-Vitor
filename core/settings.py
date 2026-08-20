@@ -27,10 +27,12 @@ SECRET_KEY = 'django-insecure-8e2b7cp4(_44e^_#v)-hyqqk!gx-*bc1(v*gat3=vtf7^=jko(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'innovedev.com.br',
-    'innovedev.com',
+    '127.0.0.1',
     '187.127.56.155',
-    '127.0.0.1'
+    '*.innovedev.com',
+    '*.innovedev.com.br',
+    'innovedev.com',
+    'innovedev.com.br',
 ]
 
 
