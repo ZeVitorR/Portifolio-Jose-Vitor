@@ -81,11 +81,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'NAME': 'portifolio',
+        'USER': 'postgres',
+        'PASSWORD': '98943531',
+        'HOST': 'localhost',
+        'PORT': '5432',
 }
 
 
